@@ -1,0 +1,84 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-light);
+}
+
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.messageWrapper {
+  display: flex;
+}
+
+.messageWrapperUser {
+  justify-content: flex-end;
+}
+
+.message {
+  max-width: 70%;
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+}
+
+.messageUser {
+  background: var(--color-message-user);
+  color: white;
+}
+
+.messageAssistant {
+  background: var(--color-message-assistant);
+  color: var(--color-text);
+}
+
+.inputContainer {
+  padding: var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.inputWrapper {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.input {
+  flex: 1;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.input:disabled {
+  background: var(--color-message-assistant);
+}
+
+.sendButton {
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
